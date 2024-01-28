@@ -1,0 +1,19 @@
+package com.codedecode.order.service;
+
+import com.codedecode.order.entity.Sequence;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.mongodb.core.MongoOperations;
+import org.springframework.data.mongodb.core.query.Query;
+import org.springframework.stereotype.Service;
+
+@Service
+public class SequenceGenerator {
+    @Autowired
+    private MongoOperations mongoOperations;
+    public generateNextOrderId(){
+        Sequence counter= mongoOperations.findAndModify(
+             query(where),
+        )
+
+    }
+}
