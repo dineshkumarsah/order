@@ -12,7 +12,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Document("order")
+@Document(collection = "order")
 public class Order {
     private Integer orderId;
     private List<FoodItemDTO> foodItemList;

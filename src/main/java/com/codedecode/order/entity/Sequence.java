@@ -8,10 +8,10 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Document(collation = "sequence")
+@Document(collection = "sequence")
 public class Sequence {
     @Id
-    private int id;
+    private String id;
     private int sequence;
 
 }

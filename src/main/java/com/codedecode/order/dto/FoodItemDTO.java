@@ -14,4 +14,5 @@ public class FoodItemDTO {
     private Boolean isVeg;
     private Number price;
     private Integer restaurantId;
+    private Integer quantity;
 }
