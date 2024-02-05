@@ -8,15 +8,25 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
+
 @RestController
 @RequestMapping("/order")
+
 public class OrderController {
     @Autowired
     OrderService orderService;
+    @CrossOrigin
     @PostMapping("/saveOrder")
     public ResponseEntity<OrderDTO> saveOrder(@RequestBody OrderDTOFromFE orderDetails){
         OrderDTO saveOrder = orderService.saveOrderDTOInDb(orderDetails);
         return new ResponseEntity<>(saveOrder, HttpStatus.CREATED);
+    }
+    @GetMapping()
+    public List<OrderDTO> getAllOrders(){
+        return orderService.gettAllOrders();
+
     }
 
 
