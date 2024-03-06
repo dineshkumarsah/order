@@ -6,7 +6,7 @@ spring:
     name: ORDER-SERVICE
   data:
     mongodb:
-      uri: mongodb://localhost:27017/orderdb
+      uri: mongodb+srv://admin:Hsenidbhu1@atlas-cluster.c5hzrwm.mongodb.net/?retryWrites=true&w=majority
       host: localhost
       port: 27017
       database: orderdb
